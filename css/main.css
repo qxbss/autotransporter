@@ -1,0 +1,532 @@
+@font-face {
+	font-family: 'Monument-Extended';
+	src: url('../font/MonumentExtended-Regular.otf');
+	font-style: normal;
+	font-weight: normal;
+}
+
+html {
+    scroll-behavior: smooth; 
+  }
+
+@font-face {
+	font-family: 'PP-Monument-Extended';
+	src: url('../font/PPMonumentExtended-Regular-BF645465a253250.otf');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Oldschool-Grotesk';
+	src: url('../font/OldschoolGrotesk-NormalRegular.otf');
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+body {
+    background-color: #1E1E1E;
+    font-family: 'Monument-Extended';
+}
+
+h1 ,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+    font-family: 'PP-Monument-Extended';
+
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+ul,
+ol,
+li,
+span {
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+    width: 90%;  
+    margin: 0 auto;
+    flex: 1;
+}
+
+.header {
+    padding: 35px 0;
+}
+
+.logo {
+    font-family: 'Monument-Extended';
+    font-size: 18px;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    font-size: 18px;
+    color: #fff;
+    margin: 0 60px;
+    transition: color 0.6s ease;
+}
+
+.menu-item:hover {
+    color: #BFBFBF;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.number a {
+    font-family: 'PP-Monument-Extended';
+    color: #fff;
+}
+
+.number a:hover {
+    color: #b0b0b0; /* Цвет при наведении */
+}
+
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.offer-title {
+    font-size: 56px;
+    color: #fff;
+}
+
+.offer-intro {
+    font-family: 'Oldschool-Grotesk';
+    font-size: 18px;
+    color: #fff;
+    width: 400px;
+    margin: 25px 0;
+}
+
+.btn {
+    font-family: 'Monument-Extended';
+    background-color: #fff;
+    color: #1E1E1E;
+    padding: 20px 50px;
+    border-radius: 16px;
+    font-size: 18px;
+    transition: background-color 0.6s ease;
+}
+
+.btn:hover {
+    background-color: #BFBFBF;
+}
+
+.btns {
+    display: flex; 
+    gap: 35px; 
+    align-items: center;
+}
+
+.btn_book {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.6s ease;
+}
+
+.btn_book:hover {
+    color: #BFBFBF;
+}
+
+.offer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 20px; 
+    flex-wrap: nowrap; 
+}
+
+.offer-content {
+    width: 50%; 
+}
+
+.offer_pics {
+    display: flex;
+    gap: 15px;
+    width: 45%;
+    align-items: stretch;
+}
+
+.pic1 {
+    background: url('../img/1.jpg') no-repeat center;
+    background-size: cover;
+    width: 60%; 
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 20px;
+    flex: 5; 
+}
+
+.pic-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    width: 45%; 
+    height: 100%; 
+    flex: 3; 
+}
+
+.pic2 {
+    background: url('../img/2.jpg') no-repeat center;
+    aspect-ratio: 1 / 1; 
+}
+
+.pic3 {
+    background: url('../img/Group 7.png') no-repeat center;
+    aspect-ratio: 1 / 1;
+}
+
+.pic {
+    background-position: center;
+    border-radius: 20px;
+    background-size: cover;
+}
+
+.global {
+    margin: 50px 0 150px 0;
+}
+
+.trailers-text {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trailers-title {
+    font-size: 36px;
+    width: 430px;
+}
+
+.trailers-intro {
+    font-size: 18px;
+    width: 430px;
+    font-family: 'PP-Monument-Extended';
+}
+
+.btn-rent {
+    color: #fff;
+    font-family: 'Monument-Extended';
+    padding: 0 70px; 
+    border: solid 1px #fff;
+    border-radius: 100px;
+    line-height: 70px; 
+    text-align: center; 
+    display: inline-block; 
+    height: 70px;
+    transition: background-color 0.6s ease;
+}
+
+.btn-trans:hover, 
+.btn-rent:hover {
+    background-color: #D35D5D; /* Фон становится чуть темнее */
+    border: solid 1px #D35D5D;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 50px 0;
+  }
+  
+  .slider-item {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    gap: 60px;
+  }
+  
+  .slider-item.active {
+    display: flex;
+  }
+  
+  .slider-image {
+    width: 550px;
+    height: 530px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background-color: #000;
+  }
+  
+  .slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  
+  .slider-info {
+    max-width: 300px;
+  }
+  
+  .slider-title {
+    font-family: 'Monument-Extended';
+    letter-spacing: 5px;
+    font-size: 20px;
+    color: #D35D5D;
+  }
+  
+  .slider-details {
+    list-style: none;
+    padding: 0;
+    font-family: 'Oldschool-Grotesk';
+    margin: 25px 0;
+  }
+  
+  .slider-details li {
+    font-size: 16px;
+    line-height: 3.5;
+  }
+  
+  .slider-controls {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .slider-prev, .slider-next {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+  
+  .slider-prev {
+    background-color: #898989;
+  }
+  
+  .slider-prev:hover, .slider-next:hover {
+    transform: scale(1.1);
+  }
+  
+  .trailers {
+    margin: 95px 0;
+  }
+  
+.trans-title {
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+}
+
+.pic4 {
+    background: url('../img/4.jpg') no-repeat center;
+    background-size: cover;
+    width: 60%; 
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 20px;
+    flex: 5; 
+}
+
+.pic5 {
+    background: url('../img/5.jpeg') no-repeat center;
+    aspect-ratio: 1 / 1; 
+    background-size: cover;
+}
+.pic6 {
+    background: url('../img/6.jpg') no-repeat center;
+    aspect-ratio: 1 / 1; 
+    background-size: cover;
+}
+
+.trans-imgs {
+    display: flex;
+    gap: 15px;
+    width: 50%;
+    align-items: stretch;
+}
+
+.trans-info {
+    width: 460px;
+    font-family: 'Oldschool-Grotesk';
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.trans-content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin: 50px 0 30px 0;
+}
+
+.transport {
+    margin: 85px 0;
+    text-align: center;
+  }
+
+  
+  .btn-trans {
+    color: #fff;
+    font-family: 'Monument-Extended';
+    padding: 0 70px; 
+    border: solid 1px #fff;
+    border-radius: 100px;
+    line-height: 70px; 
+    text-align: center; 
+    display: inline-block; 
+    height: 70px;
+    transition: background-color 0.6s ease;
+    margin-top: 30px;  /* Добавить отступ сверху, чтобы не прижималась к тексту */
+}
+
+.benf-title {
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.benf-intro {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Oldschool-Grotesk';
+    margin: 25px 0;
+}
+
+.benefit-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: start;
+    margin: 50px 0;
+}
+
+.benefit-item {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    line-height: 26px;
+}
+
+.icon {
+    font-size: 40px;
+    color: #D35D5D;
+    margin-bottom: 15px;
+}
+
+.benefit-title {
+    font-size: 22px;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.benefit-description {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Oldschool-Grotesk';
+    width: 250px;
+    margin: 0 auto;
+}
+
+.footer-number {
+    font-size: 56px;
+    color: #fff;
+    font-family: 'PP-Monument-Extended';
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+.email {
+    font-size: 36px;
+    color: #D35D5D;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer-info {
+    font-family: 'PP-Monument-Extended';
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rights {
+    text-align: left;
+}
+
+.adres {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.social {
+    text-align: right;
+}
+
+.contact {
+    margin: 90px 0;
+}
+
+.gray {
+    color: #7A7A7A;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 25px; 
+    z-index: 1000; 
+  }
+  
+  .whatsapp-icon img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background-color: #25D366; 
+    padding: 10px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease; 
+  }
+  
+  .whatsapp-icon img:hover {
+    transform: scale(1.1); 
+  }
