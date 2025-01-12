@@ -65,17 +65,17 @@ span {
 }
 
 .hamburger-menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 30px;  /* Устанавливаем ширину */
-    height: 20px; /* Устанавливаем высоту */
+    height: 18px; /* Устанавливаем высоту */
     cursor: pointer;
 }
 
 .hamburger-menu .line {
-    width: 100%;
+    width: 25px;
     height: 4px; /* Толщина линий */
     background-color: #fff; /* Цвет линий */
     border-radius: 5px; /* Скругление углов */
@@ -147,7 +147,7 @@ span {
     font-family: 'Oldschool-Grotesk';
     font-size: 18px;
     color: #fff;
-    width: 400px;
+    width: 250px;
     margin: 25px 0;
 }
 
@@ -696,38 +696,37 @@ span {
   @media screen and (max-width: 500px) {
 
     .menu-list {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         background-color: #1e1e1e;
         width: 100%;
-        height: 100vh;  /* Меню занимает всю высоту экрана */
-        padding: 20px;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* Центрируем содержимое по вертикали */
-        align-items: center; /* Центрируем содержимое по горизонтали */
-        transform: translateX(-100%);  /* Начальное скрытое состояние */
-        opacity: 0;  /* Начальная невидимость */
+        justify-content: flex-start;
+        align-items: center;
+        transform: translateX(-100%); /* Скрытое состояние */
+        opacity: 0; /* Невидимость */
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Плавные переходы */
-        visibility: hidden;
-        overflow: hidden; /* Убираем прокрутку */
-    }
-
-      /* Когда меню открыто, отключаем прокрутку страницы */
-      .menu.open {
-        overflow: hidden;  /* Когда меню открыто, страница не должна прокручиваться */
-    }
-
-    .menu.open .menu-list {
-        height: 100vh;
+        visibility: hidden; /* Элемент скрыт */
+        z-index: 9;
     }
     
     .menu.open .menu-list {
-        transform: translateX(0); 
-        opacity: 1;  
-        visibility: visible; 
-        transition: transform 0.3s ease, opacity 0.3s ease; 
+        transform: translateX(0); /* Показываем меню */
+        opacity: 1; /* Полностью видно */
+        visibility: visible; /* Делаем видимым */
+    }
+    
+    /* Добавим отдельное состояние для закрытия */
+    .menu-closing .menu-list {
+        transform: translateX(-100%); /* Возвращаем в скрытое состояние */
+        opacity: 0; /* Постепенно скрываем */
+        visibility: visible; /* Видимым, пока анимация не закончится */
+    }
+    body.menu-open {
+        overflow: hidden;  /* При открытом меню страница не должна прокручиваться */
     }
     
     .hamburger-menu {
@@ -740,17 +739,20 @@ span {
     .menu.open .hamburger-menu .line:nth-child(1) {
         transform: rotate(45deg);
         position: relative;
-        top: 7px;  
+        top: 7px;
+        z-index: 10;
     }
     
     .menu.open .hamburger-menu .line:nth-child(2) {
         opacity: 0;  
+
     }
     
     .menu.open .hamburger-menu .line:nth-child(3) {
         transform: rotate(-45deg);
         position: relative;
-        top: -7px;  /* Смещаем третью линию */
+        top: -7px; 
+        z-index: 10;
     }
 
     .offer {
@@ -822,7 +824,7 @@ span {
     }
 
     .global {
-        margin: 50px 0 50px 0;
+        margin: 50px 0 0 0;
     }
 
     .header {
@@ -842,6 +844,31 @@ span {
     .menu-list {
         flex-direction: column;
         justify-content: center;
+    }
+
+    .trailers {
+        margin: 50px 0;
+    }
+
+    .transport {
+        margin: 70px 0 110px 0;
+    }
+
+    .email a {
+        font-size: 14px;
+    }
+
+    .footer-number a {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    .footer-info {
+        font-size: 8px;
+    }
+
+    .benefit-items {
+        margin: 30px 0;
     }
 
   }
