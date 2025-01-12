@@ -64,6 +64,24 @@ span {
     padding: 35px 0;
 }
 
+.menu.open .menu-list {
+    transform: translateX(0); 
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
 .logo {
     font-family: 'Monument-Extended';
     font-size: 18px;
@@ -147,17 +165,6 @@ span {
     align-items: center;
 }
 
-.btn_book {
-    font-size: 16px;
-    color: #fff;
-    text-decoration: underline;
-    transition: color 0.6s ease;
-}
-
-.btn_book:hover {
-    color: #BFBFBF;
-}
-
 .offer {
     display: flex;
     justify-content: space-between; 
@@ -173,43 +180,43 @@ span {
 .offer_pics {
     display: flex;
     gap: 15px;
-    width: 45%;
+    width: 49%;
+    height: 500px; 
     align-items: stretch;
 }
-
 .pic1 {
     background: url('../img/1.jpg') no-repeat center;
     background-size: cover;
-    width: 60%; 
-    height: 100%;
-    aspect-ratio: 4 / 5;
     border-radius: 20px;
-    flex: 5; 
+    flex: 2;
 }
 
 .pic-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 15px; 
-    width: 45%; 
-    height: 100%; 
-    flex: 3; 
+    gap: 15px;  
+    flex: 1;
 }
 
 .pic2 {
     background: url('../img/2.jpg') no-repeat center;
-    aspect-ratio: 1 / 1; 
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    flex: 1; /* Делит высоту поровну с pic3 */
 }
 
 .pic3 {
     background: url('../img/Group 7.png') no-repeat center;
-    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    flex: 1; /* Делит высоту поровну с pic2 */
 }
 
 .pic {
-    background-position: center;
-    border-radius: 20px;
-    background-size: cover;
+    aspect-ratio: auto;
+
 }
 
 .global {
@@ -354,30 +361,36 @@ span {
 .pic4 {
     background: url('../img/4.jpg') no-repeat center;
     background-size: cover;
-    width: 60%; 
-    height: 100%;
-    aspect-ratio: 4 / 5;
     border-radius: 20px;
-    flex: 5; 
+    flex: 2; /* Занимает 2 части ширины */
+    aspect-ratio: 4 / 5; /* Пропорции как в первой секции */
+}
+
+.trans-imgs .pic5, 
+.trans-imgs .pic6 {
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    flex: 1; /* Равномерно делят высоту */
+    aspect-ratio: 1 / 1; /* Квадратные пропорции */
 }
 
 .pic5 {
     background: url('../img/5.jpeg') no-repeat center;
-    aspect-ratio: 1 / 1; 
-    background-size: cover;
 }
+
 .pic6 {
     background: url('../img/6.jpg') no-repeat center;
-    aspect-ratio: 1 / 1; 
-    background-size: cover;
 }
+
 
 .trans-imgs {
     display: flex;
     gap: 15px;
     width: 50%;
-    align-items: stretch;
+    align-items: stretch; 
 }
+
 
 .trans-info {
     width: 460px;
@@ -392,11 +405,11 @@ span {
     display: flex;
     align-items: center;
     gap: 100px;
-    margin: 50px 0 30px 0;
+    margin: 50px 0 50px 0;
 }
 
 .transport {
-    margin: 85px 0;
+    margin: 130px 0;
     text-align: center;
   }
 
@@ -464,7 +477,7 @@ span {
     margin: 0 auto;
 }
 
-.footer-number {
+.footer-number a {
     font-size: 56px;
     color: #fff;
     font-family: 'PP-Monument-Extended';
@@ -472,7 +485,7 @@ span {
     margin: 20px 0;
 }
 
-.email {
+.email a {
     font-size: 36px;
     color: #D35D5D;
 }
@@ -529,4 +542,257 @@ span {
   
   .whatsapp-icon img:hover {
     transform: scale(1.1); 
+  }
+
+
+  @media screen and (max-width: 1400px) {
+    .benefit-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+    .trailers-title {
+        font-size: 28px;
+        width: 320px;
+    }
+
+    .trailers-intro {
+        font-size: 16px;
+        width: 370px;
+    }
+
+    .offer-title {
+        font-size: 48px;
+    }
+
+    .offer-intro {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .menu-item,
+    .number a,
+    .logo,
+    .btn,
+    .trans-info,
+    .benf-title  {
+        font-size: 16px;
+    }
+
+    .slider-title {
+        font-size: 18px;
+    }
+    
+    .trans-title,
+    .benf-title  {
+        font-size: 28px;
+    }
+    .footer-number a{
+        font-size: 48px;
+    }
+
+    .email a {
+        font-size: 28px;
+    }
+
+    .menu-item {
+        margin: 0 45px;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .menu-item,
+    .number a,
+    .logo,
+    .btn,
+    .trans-info,
+    .benf-title,
+    .benefit-description,
+    .footer-info  {
+        font-size: 14px;
+    }
+
+    .slider-title {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .trailers-title {
+        font-size: 24px;
+        width: 275px;
+    }
+
+    .offer-title {
+        font-size: 38px;
+    }
+
+    .menu-item {
+        margin: 0 30px;
+    }
+
+    .trans-content {
+        gap: 50px;
+    }
+
+    .trans-title,
+    .benf-title  {
+        font-size: 24px;
+    }
+
+    .benefit-title {
+        font-size: 18px;
+    }
+
+    .benefit-items {
+        gap: 15px;
+
+    }
+  }
+
+  @media screen and (max-width: 985px) {
+    .trailers-title {
+        font-size: 22px;
+        width: 130px;
+    }
+
+    .trailers-intro {
+        font-size: 14px;
+        width: 325px;
+    }
+
+    .slider-image {
+        width: 465px;
+        height: 465px;
+    }
+
+    .trans-title, .benf-title {
+        font-size: 22px;
+    }
+
+    .transport {
+        margin: 70px 0;
+    }
+
+    .slider {
+        margin: 30px 0;
+    }
+
+    .offer_pics {
+        height: 399px;
+    }
+
+    .trans-info {
+        width: 350px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .menu-list {
+        display: none; /* Скрыть меню на мобильных устройствах */
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #1e1e1e;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        text-align: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Когда меню открыто */
+    .menu.open .menu-list {
+        transform: translateX(0);
+    }
+
+    /* Показываем гамбургер-иконку */
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .offer {
+        flex-direction: column;
+        gap: 65px;
+    }
+
+    .offer-content,
+    .offer_pics,
+    .trans-imgs {
+        width: 100%;
+    }
+
+    .offer-title {
+
+    }
+
+    .slider-item {
+        flex-direction: column;
+    }
+
+    .benefit-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .email a {
+        font-size: 16px;
+    }
+
+    .footer-number a {
+        font-size: 28px;
+    }
+
+    .slider-image {
+        width: 350px;
+        height: 350px;
+        border-radius: 12px;
+    }
+
+    .trans-content {
+       flex-direction: column;
+    }
+
+    .trans-info {
+        text-align: center;
+        line-height: 24px;
+    }
+
+    .footer-info {
+        font-size: 10px;
+    }
+
+    .trailers-text {
+        flex-direction: column;
+        align-items: baseline;
+        gap: 25px;
+    }
+
+    .slider-item {
+        align-items: baseline;
+    }
+
+    .wrapper {
+        gap: 20px;
+    }
+
+    .menu-item {
+        margin-left: 10px;
+    }
+
+    .global {
+        margin: 50px 0 50px 0;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .contact {
+        margin: 50px 0;
+    }
+
   }
