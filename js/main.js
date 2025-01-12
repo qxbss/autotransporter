@@ -1,11 +1,38 @@
-// Получаем элемент гамбургера и меню
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const menu = document.querySelector('.menu');
+const menuLinks = document.querySelectorAll('.menu-item');
 
-// Добавляем обработчик клика на гамбургер
-hamburgerMenu.addEventListener('click', function() {
-    menu.classList.toggle('open'); // Переключаем класс 'open' для меню
+function toggleMenu() {
+    if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        menu.classList.add('menu-closing'); // Добавляем класс закрытия
+        setTimeout(() => {
+            menu.classList.remove('menu-closing');
+            document.body.classList.remove('menu-open');
+        }, 300); // Задержка для завершения анимации
+    } else {
+        menu.classList.add('open');
+        document.body.classList.add('menu-open');
+    }
+}
+
+function closeMenu() {
+    menu.classList.remove('open');
+    menu.classList.add('menu-closing'); // Добавляем класс закрытия
+    setTimeout(() => {
+        menu.classList.remove('menu-closing');
+        document.body.classList.remove('menu-open');
+    }, 300); // Учитываем длительность анимации
+}
+
+// Открытие/закрытие по клику на гамбургер
+hamburgerMenu.addEventListener('click', toggleMenu);
+
+// Закрытие меню при клике на ссылку
+menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
 });
+
 
 const prevButton = document.querySelector('.slider-prev');
 const nextButton = document.querySelector('.slider-next');
