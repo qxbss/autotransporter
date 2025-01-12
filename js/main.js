@@ -1,12 +1,11 @@
-// Скрипт для открытия и закрытия меню при клике на гамбургер
+// Получаем элемент гамбургера и меню
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const menu = document.querySelector('.menu');
 
-hamburgerMenu.addEventListener('click', () => {
-    menu.classList.toggle('open');
+// Добавляем обработчик клика на гамбургер
+hamburgerMenu.addEventListener('click', function() {
+    menu.classList.toggle('open'); // Переключаем класс 'open' для меню
 });
-
-
 
 const prevButton = document.querySelector('.slider-prev');
 const nextButton = document.querySelector('.slider-next');
