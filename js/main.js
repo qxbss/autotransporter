@@ -1,3 +1,13 @@
+// Скрипт для открытия и закрытия меню при клике на гамбургер
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const menu = document.querySelector('.menu');
+
+hamburgerMenu.addEventListener('click', () => {
+    menu.classList.toggle('open');
+});
+
+
+
 const prevButton = document.querySelector('.slider-prev');
 const nextButton = document.querySelector('.slider-next');
 let currentIndex = 0;
